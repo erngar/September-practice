@@ -155,7 +155,24 @@ class Animal {
   
   let rabbit = new Rabbit("White Rabbit");
   
-  rabbit.run(5); // White Rabbit runs with speed 5.
-  rabbit.stop(); // White Rabbit stands still. White Rabbit hides!
+//   rabbit.run(5); // White Rabbit runs with speed 5.
+//   rabbit.stop(); // White Rabbit stands still. White Rabbit hides!
 
-  
+
+  //Create a class with multiple characters that share properties and methods
+  //demonstrate private methods
+
+  class Characters{
+    constructor(name,type,book){
+        this._name = name
+        this._type = type
+        this._book = book
+    }
+    intro(){
+        console.log(`${this._name} is a ${this._type} in the book ${this._book}`);
+    }
+  }
+
+  let donquixote = new Characters("Don Quixote", "Protagonist","Don Quixote De La Mancha")
+
+  donquixote.intro()
